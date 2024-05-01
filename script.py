@@ -1,8 +1,11 @@
-import csv
+import csv, logging
 from datetime import datetime
 
+date = datetime.now()
 
-with open(r"/data/results.csv", "a") as f:
+logger = logging.getLogger(__name__)
+logger.info(date)
+
+with open(r"data/results.csv", "a") as f:
     w = csv.writer(f)
-    date = datetime.now()
     w.writerow([date])
