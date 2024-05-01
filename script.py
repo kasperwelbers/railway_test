@@ -5,6 +5,7 @@ date = datetime.now()
 
 logger = logging.getLogger(__name__)
 logger.info(date)
+print(date)
 
 with open(r"data/results.csv", "a") as f:
     w = csv.writer(f)
